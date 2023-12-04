@@ -1,0 +1,6 @@
+C:\Users\logan\Documents\PizzaDelivery\obj\Debug\net8.0\PizzaDelivery.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\logan\Documents\PizzaDelivery\obj\Debug\net8.0\PizzaDelivery.AssemblyInfoInputs.cache
+C:\Users\logan\Documents\PizzaDelivery\obj\Debug\net8.0\PizzaDelivery.AssemblyInfo.cs
+C:\Users\logan\Documents\PizzaDelivery\obj\Debug\net8.0\PizzaDelivery.csproj.CoreCompileInputs.cache
+C:\Users\logan\Documents\PizzaDelivery\obj\Debug\net8.0\PizzaDelivery.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\logan\Documents\PizzaDelivery\obj\Debug\net8.0\PizzaDelivery.sourcelink.json

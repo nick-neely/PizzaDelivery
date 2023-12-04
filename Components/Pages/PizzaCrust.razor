@@ -1,0 +1,41 @@
+﻿@page "/pizza_delivery"
+@rendermode InteractiveServer
+
+<h3>Pizza Delivery</h3>
+
+<label>
+	<input type="checkbox" @bind='pizza.PizzaTopping.Bacon' />
+	Bacon
+</label>
+
+<label>
+	<input type="checkbox" @bind='pizza.PizzaTopping.MoreBacon' />
+	More Bacon
+</label>
+
+<label>
+	<input type="checkbox" @bind='pizza.PizzaTopping.EvenMoreBacon' />
+	Even More Bacon
+</label>
+
+<p>Topping Selection</p>
+<ul>
+	@if (pizza.PizzaTopping.Bacon)
+	{
+		<li>Bacon</li>
+	}
+	@if (pizza.PizzaTopping.MoreBacon)
+	{
+		<li>More Bacon</li>
+	}
+	@if (pizza.PizzaTopping.EvenMoreBacon)
+	{
+		<li>Even More Bacon</li>
+	}
+</ul>
+
+<p>Total Price: $@pizza.GetFinalPrice()</p>
+
+@code {
+	Pizza pizza = new Pizza();
+}

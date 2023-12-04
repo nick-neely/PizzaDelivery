@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\neely\\OneDrive - Indian Hills Community College\\Advanced .NET\\PizzaDelivery\\PizzaDelivery\\PizzaDelivery.csproj",
+      "projectUniqueName": "C:\\Users\\neely\\OneDrive - Indian Hills Community College\\Advanced .NET\\PizzaProject\\PizzaDelivery\\PizzaDelivery.csproj",
       "projectName": "PizzaDelivery",
-      "projectPath": "C:\\Users\\neely\\OneDrive - Indian Hills Community College\\Advanced .NET\\PizzaDelivery\\PizzaDelivery\\PizzaDelivery.csproj",
+      "projectPath": "C:\\Users\\neely\\OneDrive - Indian Hills Community College\\Advanced .NET\\PizzaProject\\PizzaDelivery\\PizzaDelivery.csproj",
       "packagesPath": "C:\\Users\\neely\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\neely\\OneDrive - Indian Hills Community College\\Advanced .NET\\PizzaDelivery\\PizzaDelivery\\obj\\",
+      "outputPath": "C:\\Users\\neely\\OneDrive - Indian Hills Community College\\Advanced .NET\\PizzaProject\\PizzaDelivery\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

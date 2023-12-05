@@ -5,6 +5,39 @@ project.lock.json
 *.pyc
 nupkg/
 
+# Build Folders
+obj/
+bin/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# VS Code folders
+.vs/
+.vscode/
+
+# NuGet
+project.assets.json
+*.nuget.targets
+*.nuget.props
+*.nupkg
+*.nuproj
+nuget.exe
+NuGet.config
+
+# Generated files
+*.AssemblyInfo.cs
+*.FileListAbsolute.txt
+GeneratedMSBuildEditorConfig.editorconfig
+*.csproj.nuget.dgspec.json
+*.csproj.nuget.g.props
+*.csproj.nuget.g.targets
+*.cache
+*.razor.cs
+
 # Visual Studio Code
 .vscode/
 

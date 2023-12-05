@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "AEpAgxd1lnPER+a+pUa46YO9ur5CRW9o9OR32b05FuG2SAEVLbzHnUFd6E1HOvnp30Q1UkdQKWTWIsNon9F1rw==",
   "success": true,
   "projectFilePath": "C:\\Users\\logan\\Documents\\PizzaDelivery\\PizzaDelivery.csproj",
-=======
-  "dgSpecHash": "k1NEXRI38BXhHeTCxbc6FFL3I/L941/yCNxbsS7Hx+NChAy4uvRK9bzbStnv2Zlkk6YkbF2DluYEtQ0AJ0DoSA==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\neely\\OneDrive - Indian Hills Community College\\Advanced .NET\\PizzaProject\\PizzaDelivery\\PizzaDelivery.csproj",
->>>>>>> c7935f2d81dc75d280eb902ab2d05968fcc55138
   "expectedPackageFiles": [],
   "logs": [
     {

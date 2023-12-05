@@ -1,5 +1,49 @@
-﻿<h3>PizzaToppings</h3>
+﻿@page "/pizzatopping"
+@rendermode InteractiveServer
+
+<h3>Pizza Topping</h3>
+
+<label>
+	<input type="checkbox" @bind='pizza.PizzaTopping.Pepperoni' />
+	Pepperoni
+</label>
+
+<label>
+	<input type="checkbox" @bind='pizza.PizzaTopping.Sausage' />
+	Sausage
+</label>
+
+<label>
+	<input type="checkbox" @bind='pizza.PizzaTopping.Ham' />
+	Ham
+</label>
+
+<label>
+	<input type="checkbox" @bind='pizza.PizzaTopping.Chicken' />
+	Chicken
+</label>
+
+<p>Topping Selection</p>
+<ul>
+	@if (pizza.PizzaTopping.Pepperoni)
+	{
+		<li>Bacon</li>
+	}
+	@if (pizza.PizzaTopping.Sausage)
+	{
+		<li>Sausage</li>
+	}
+	@if (pizza.PizzaTopping.Ham)
+	{
+		<li>Ham</li>
+	}
+	@if (pizza.PizzaTopping.Chicken)
+	{
+		<li>Chicken</li>
+	}
+</ul>
 
 @code {
-
+	Pizza pizza = new Pizza();
 }
+

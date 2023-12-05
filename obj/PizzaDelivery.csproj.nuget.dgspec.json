@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "C:\\Users\\logan\\Documents\\PizzaDelivery\\PizzaDelivery.csproj": {}
   },
   "projects": {
@@ -13,19 +12,6 @@
         "projectPath": "C:\\Users\\logan\\Documents\\PizzaDelivery\\PizzaDelivery.csproj",
         "packagesPath": "C:\\Users\\logan\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\logan\\Documents\\PizzaDelivery\\obj\\",
-=======
-    "C:\\Users\\neely\\OneDrive - Indian Hills Community College\\Advanced .NET\\PizzaProject\\PizzaDelivery\\PizzaDelivery.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\neely\\OneDrive - Indian Hills Community College\\Advanced .NET\\PizzaProject\\PizzaDelivery\\PizzaDelivery.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\neely\\OneDrive - Indian Hills Community College\\Advanced .NET\\PizzaProject\\PizzaDelivery\\PizzaDelivery.csproj",
-        "projectName": "PizzaDelivery",
-        "projectPath": "C:\\Users\\neely\\OneDrive - Indian Hills Community College\\Advanced .NET\\PizzaProject\\PizzaDelivery\\PizzaDelivery.csproj",
-        "packagesPath": "C:\\Users\\neely\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\neely\\OneDrive - Indian Hills Community College\\Advanced .NET\\PizzaProject\\PizzaDelivery\\obj\\",
->>>>>>> c7935f2d81dc75d280eb902ab2d05968fcc55138
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

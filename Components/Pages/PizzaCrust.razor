@@ -1,40 +1,38 @@
-﻿@page "/pizza_delivery"
+﻿@page "/pizzacrust"
 @rendermode InteractiveServer
 
-<h3>Pizza Delivery</h3>
+<h3>Pizza Crust</h3>
 
 <label>
-	<input type="checkbox" @bind='pizza.PizzaTopping.Bacon' />
-	Bacon
+	<input type="radio" @bind='pizza.PizzaCrust.Thin' />
+	Thin
 </label>
 
 <label>
-	<input type="checkbox" @bind='pizza.PizzaTopping.MoreBacon' />
-	More Bacon
+	<input type="radio" @bind='pizza.PizzaCrust.Pan' />
+	Pan
 </label>
 
 <label>
-	<input type="checkbox" @bind='pizza.PizzaTopping.EvenMoreBacon' />
-	Even More Bacon
+	<input type="radio" @bind='pizza.PizzaCrust.Hand' />
+	Hand
 </label>
 
 <p>Topping Selection</p>
 <ul>
-	@if (pizza.PizzaTopping.Bacon)
+	@if (pizza.PizzaCrust.Thin)
 	{
-		<li>Bacon</li>
+		<li>Thin</li>
 	}
-	@if (pizza.PizzaTopping.MoreBacon)
+	@if (pizza.PizzaCrust.Pan)
 	{
-		<li>More Bacon</li>
+		<li>Pan</li>
 	}
-	@if (pizza.PizzaTopping.EvenMoreBacon)
+	@if (pizza.PizzaCrust.Hand)
 	{
-		<li>Even More Bacon</li>
+		<li>Hand</li>
 	}
 </ul>
-
-<p>Total Price: $@pizza.GetFinalPrice()</p>
 
 @code {
 	Pizza pizza = new Pizza();

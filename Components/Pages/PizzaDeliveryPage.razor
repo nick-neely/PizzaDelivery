@@ -1,82 +1,9 @@
 ﻿@page "/pizzadelivery"
 @rendermode InteractiveServer
 
-<h3>PizzaDelivery</h3>
+<PizzaCrust/>
+<PizzaToppings/>
 
-<h2>Pizza Topping</h2>
-
-<label>
-	<input type="checkbox" @bind='pizza.PizzaTopping.Pepperoni' />
-	Pepperoni
-</label>
-
-<label>
-	<input type="checkbox" @bind='pizza.PizzaTopping.Sausage' />
-	Sausage
-</label>
-
-<label>
-	<input type="checkbox" @bind='pizza.PizzaTopping.Ham' />
-	Ham
-</label>
-
-<label>
-	<input type="checkbox" @bind='pizza.PizzaTopping.Chicken' />
-	Chicken
-</label>
-
-<p>Topping Selection</p>
-<ul>
-	@if (pizza.PizzaTopping.Pepperoni)
-	{
-		<li>Pepperoni</li>
-	}
-	@if (pizza.PizzaTopping.Sausage)
-	{
-		<li>Sausage</li>
-	}
-	@if (pizza.PizzaTopping.Ham)
-	{
-		<li>Ham</li>
-	}
-	@if (pizza.PizzaTopping.Chicken)
-	{
-		<li>Chicken</li>
-	}
-</ul>
-
-<h3>Pizza Crust</h3>
-
-<label>
-	<input type="radio" @bind='pizza.PizzaCrust.Thin' />
-	Thin
-</label>
-
-<label>
-	<input type="radio" @bind='pizza.PizzaCrust.Pan' />
-	Pan
-</label>
-
-<label>
-	<input type="radio" @bind='pizza.PizzaCrust.Hand' />
-	Hand
-</label>
-
-<p>Topping Selection</p>
-<ul>
-	@if (pizza.PizzaCrust.Thin)
-	{
-		<li>Thin</li>
-	}
-	@if (pizza.PizzaCrust.Pan)
-	{
-		<li>Pan</li>
-	}
-	@if (pizza.PizzaCrust.Hand)
-	{
-		<li>Hand</li>
-	}
-</ul>
 
 @code {
     Pizza pizza = new Pizza();

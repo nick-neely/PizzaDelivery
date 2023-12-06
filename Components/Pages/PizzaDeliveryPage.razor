@@ -1,11 +1,62 @@
 ﻿@page "/pizzadelivery"
 @rendermode InteractiveServer
 
-<PizzaCrust/>
-<PizzaToppings/>
+<div class="container">
+    <h3 class="my-3">Pizza Delivery</h3>
 
+    <PizzaCrust selectedCrust="@crust"/>
+    <PizzaToppings selectedToppings="@toppings"/>
+
+    <div class="form-group">
+        <label for="tipSelection">Select Tip Percentage:</label>
+        <select class="form-control" id="tipSelection" @onchange="UpdateTip">
+            <option value="12">12%</option>
+            <option value="15">15%</option>
+            <option value="18">18%</option>
+        </select>
+    </div>
+
+    <button class="btn btn-primary mt-2" @onclick="CalculateTipAndTotal">Calculate</button>
+
+    <p class="my-3">Pizza Crust Cost: @crust.CrustPrice().ToString("C")</p>
+    <p>Pizza Toppings Cost: @toppings.ToppingPrices().ToString("C")</p>
+    <p>Pizza Delivery Fee Cost: @pizza.GetDeliveryFee().ToString("C")</p>
+    <p>Pizza Tip: @(pizzaTip.ToString("C"))</p>
+    <p>Final Total: @(finalTotal.ToString("C"))</p>
+</div>
 
 @code {
+    Crust crust = new Crust();
+    Toppings toppings = new Toppings();
     Pizza pizza = new Pizza();
+    double pizzaTip = 0;
+    double finalTotal = 0;
 
+    private void UpdateTipPercentage(ChangeEventArgs e)
+    {
+        pizza.TipPercentage = double.Parse(e.Value?.ToString() ?? "0");
+    }
+
+    private void CalculateTipAndTotal()
+    {
+        double foodCost = crust.CrustPrice() + toppings.ToppingPrices();
+        pizzaTip = pizza.CalculateTip(foodCost);
+        finalTotal = foodCost + pizza.GetDeliveryFee() + pizzaTip;
+    }
+
+    private void CrustChanged(Crust newCrust)
+    {
+        crust = newCrust;
+    }
+
+    private double GetFoodCost()
+    {
+        return crust.CrustPrice() + toppings.ToppingPrices();
+    }
+
+    private void UpdateTip(ChangeEventArgs e)
+    {
+        pizza.TipPercentage = double.Parse(e.Value?.ToString() ?? "0");
+        pizza.CalculateTip(GetFoodCost()); // Pass the food cost to CalculateTip
+    }
 }

@@ -6,43 +6,56 @@ namespace PizzaDelivery
 {
 	public class Pizza
 	{
-		public Topping PizzaTopping { get; set; }
+		public Toppings PizzaTopping { get; set; }
 
 		public Crust PizzaCrust { get; set; }
 
+		public double TipPercentage { get; set; }
+		private const double DeliveryFee = 2.00;
+
 		public Pizza()
 		{
-			PizzaTopping = new Topping();
+			PizzaTopping = new Toppings();
 			PizzaCrust = new Crust();
 		}
 
-
-
-		public double GetFinalPrice()
+		public double CalculateTip(double foodCost)
 		{
-			return PizzaTopping.ToppingPrice() + PizzaCrust.CrustPrice();
+    // Tip is calculated on the food cost plus delivery fee
+    return (foodCost + DeliveryFee) * (TipPercentage / 100);
+		}
+
+		public double GetFinalPrice(double foodCost, double tip)
+		{
+    // Final price is the sum of food cost, delivery fee, and tip
+    return foodCost + DeliveryFee + tip;
+		}
+
+		public double GetDeliveryFee()
+		{
+			return DeliveryFee;
 		}
 
 	}
 
 
-	public class Topping
+	public class Toppings
 	{
 
 		public bool Pepperoni { get; set; }
-		public bool Sausage { get; set; }
+		public bool ExtraCheese { get; set; }
 		public bool Ham { get; set; }
 
 		public bool Chicken { get; set; }
 
-		public double ToppingPrice()
+		public double ToppingPrices()
 		{
 			double runningTotal = 0;
 			if (Pepperoni)
 			{
 				runningTotal += 1.50;
 			}
-			if (Sausage)
+			if (ExtraCheese)
 			{
 				runningTotal += 2.00;
 			}

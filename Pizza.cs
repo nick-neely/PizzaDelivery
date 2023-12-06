@@ -10,17 +10,23 @@ namespace PizzaDelivery
 
 		public Crust PizzaCrust { get; set; }
 
+		public Tip PizzaTip { get; set; }
+
+
 		public Pizza()
 		{
 			PizzaTopping = new Topping();
 			PizzaCrust = new Crust();
+			PizzaTip = new Tip();
 		}
 
 
 
-		public double GetFinalPrice()
+		public double TotalPrice()
 		{
-			return PizzaTopping.ToppingPrice() + PizzaCrust.CrustPrice();
+			double totalTip = (PizzaTopping.ToppingPrice() + PizzaCrust.CrustPrice()) * PizzaTip.TipAmount();
+			double totalAmount = PizzaTopping.ToppingPrice() + PizzaCrust.CrustPrice() + 2.00 + totalTip;
+			return totalAmount;
 		}
 
 	}
@@ -80,6 +86,31 @@ namespace PizzaDelivery
 				runningTotal += 6.99;
 			}
 			return runningTotal;
+		}
+	}
+
+	public class Tip()
+	{
+		public bool smallTip { get; set; }
+		public bool mediumTip { get; set; }
+		public bool LargeTip { get; set; }
+
+		public double TipAmount()
+		{
+			double tip = 0;
+			if (smallTip)
+			{
+				tip = .12;
+			}
+			if (mediumTip)
+			{
+				tip = .15;
+			}
+			if (LargeTip)
+			{
+				tip = .18;
+			}
+			return tip;
 		}
 	}
 }

@@ -22,18 +22,19 @@
 <ul>
 	@if (pizza.PizzaCrust.Thin)
 	{
-		<li>Thin</li>
+		<li>Thin Crust - 5.99</li>
 	}
 	@if (pizza.PizzaCrust.Pan)
 	{
-		<li>Pan</li>
+		<li>Pan Crust - 7.99</li>
 	}
 	@if (pizza.PizzaCrust.Hand)
 	{
-		<li>Hand</li>
+		<li>Hand Tossed 6.99</li>
 	}
 </ul>
 
 @code {
-	Pizza pizza = new Pizza();
+	[Parameter]
+	public Pizza pizza { get; set; }
 }

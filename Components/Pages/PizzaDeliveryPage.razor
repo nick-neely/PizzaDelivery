@@ -78,7 +78,19 @@
 	}
 </ul>
 
+<button type="button" onclick="@GetPrice">Get Total Price</button>
+
+<p>Total: $@price</p>
+
 @code {
-    Pizza pizza = new Pizza();
+	Pizza pizza = new Pizza();
+
+
+	double price;
+
+	private void GetPrice()
+	{
+		price = pizza.GetTotalPrice();
+	}
 
 }

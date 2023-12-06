@@ -27,23 +27,23 @@
 <ul>
 	@if (pizza.PizzaTopping.Pepperoni)
 	{
-		<li>Bacon</li>
+		<li>Pepperoni - 1.50</li>
 	}
 	@if (pizza.PizzaTopping.Sausage)
 	{
-		<li>Sausage</li>
+		<li>Extra Cheese - 2.00</li>
 	}
 	@if (pizza.PizzaTopping.Ham)
 	{
-		<li>Ham</li>
+		<li>Ham - 1.79</li>
 	}
 	@if (pizza.PizzaTopping.Chicken)
 	{
-		<li>Chicken</li>
+		<li>Chicken - 3</li>
 	}
 </ul>
 
 @code {
-	Pizza pizza = new Pizza();
+	[Parameter]
+	public Pizza pizza { get; set; }
 }
-

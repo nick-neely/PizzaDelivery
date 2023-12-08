@@ -1,49 +1,49 @@
 ﻿@page "/pizzatopping"
 @rendermode InteractiveServer
 
-<h3>Pizza Topping</h3>
+<div class="container">
+    <h3 class="my-3">Pizza Toppings</h3>
 
-<label>
-	<input type="checkbox" @bind='pizza.PizzaTopping.Pepperoni' />
-	Pepperoni
-</label>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" @bind="selectedToppings.Pepperoni" id="pepperoni">
+        <label class="form-check-label" for="pepperoni">
+            Pepperoni - $1.50
+        </label>
+    </div>
 
-<label>
-	<input type="checkbox" @bind='pizza.PizzaTopping.Sausage' />
-	Sausage
-</label>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" @bind="selectedToppings.ExtraCheese" id="extraCheese">
+        <label class="form-check-label" for="extraCheese">
+            Extra Cheese - $2.00
+        </label>
+    </div>
 
-<label>
-	<input type="checkbox" @bind='pizza.PizzaTopping.Ham' />
-	Ham
-</label>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" @bind="selectedToppings.Ham" id="ham">
+        <label class="form-check-label" for="ham">
+            Ham - $1.79
+        </label>
+    </div>
 
-<label>
-	<input type="checkbox" @bind='pizza.PizzaTopping.Chicken' />
-	Chicken
-</label>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" @bind="selectedToppings.Chicken" id="chicken">
+        <label class="form-check-label" for="chicken">
+            Chicken - $3.00
+        </label>
+    </div>
 
-<p>Topping Selection</p>
-<ul>
-	@if (pizza.PizzaTopping.Pepperoni)
-	{
-		<li>Bacon</li>
-	}
-	@if (pizza.PizzaTopping.Sausage)
-	{
-		<li>Sausage</li>
-	}
-	@if (pizza.PizzaTopping.Ham)
-	{
-		<li>Ham</li>
-	}
-	@if (pizza.PizzaTopping.Chicken)
-	{
-		<li>Chicken</li>
-	}
-</ul>
+    <p class="my-3">Selected Toppings:</p>
+    <ul>
+        @if (selectedToppings.Pepperoni) { <li>Pepperoni</li> }
+        @if (selectedToppings.ExtraCheese) { <li>Extra Cheese</li> }
+        @if (selectedToppings.Ham) { <li>Ham</li> }
+        @if (selectedToppings.Chicken) { <li>Chicken</li> }
+    </ul>
+
+    <p class="fw-bold">Total Toppings Price: @selectedToppings.ToppingPrices().ToString("C")</p>
+</div>
 
 @code {
-	Pizza pizza = new Pizza();
+    [Parameter]
+    public Toppings selectedToppings { get; set; } = new Toppings();
 }
-
